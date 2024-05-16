@@ -1,11 +1,5 @@
 // The Book class is responsible for holding information about single Book entity
 export class Book {
-    title;
-    author;
-    isbn;
-    price;
-    availability;
-
     constructor(title, author, isbn, price, availability) {
         this.title = title;
         this.author = author;
@@ -17,8 +11,6 @@ export class Book {
 
 // The FictionBook class is extending the Book class, while adding new public property - genre
 export class FictionBook extends Book {
-    genre;
-
     constructor(title, author, isbn, price, availability, genre) {
         super(title, author, isbn, price, availability);
         this.genre = genre;
@@ -27,8 +19,6 @@ export class FictionBook extends Book {
 
 // The TechnicalBook class is extending the Book class, while adding new public property - theme
 export class TechnicalBook extends Book {
-    theme;
-
     constructor(title, author, isbn, price, availability, theme) {
         super(title, author, isbn, price, availability);
         this.theme = theme;
@@ -39,9 +29,6 @@ export class TechnicalBook extends Book {
 // 1. Holding information about single User entity
 // 2. Creating the order by passing entity of the Cart class
 export class User {
-    name;
-    email;
-
     constructor(name, email) {
         this.name = name;
         this.email = email;
@@ -73,7 +60,6 @@ function uuidv4() {
 // 4. Calculate total price of the books in the cart
 // 5. Creating an order
 export class Cart {
-    books;
     #user;
 
     constructor(user) {
@@ -115,10 +101,6 @@ export class Cart {
 // 2. The books, which was ordered
 // 3. The total price of the ordered books
 export class Order {
-    user;
-    books;
-    totalPrice;
-
     constructor(user, books, totalPrice) {
         this.user = user;
         this.books = books;
